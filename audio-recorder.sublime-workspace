@@ -1,0 +1,1703 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"St",
+				"StatusOK"
+			],
+			[
+				"Er",
+				"Errorf"
+			],
+			[
+				"float",
+				"float32"
+			],
+			[
+				"recod",
+				"records"
+			],
+			[
+				"cloe",
+				"closeRecordModal"
+			],
+			[
+				"flex",
+				"flex\tproperty"
+			],
+			[
+				"ma",
+				"match\tmatch … { … }"
+			],
+			[
+				"print",
+				"println\tprintln!(…)"
+			],
+			[
+				"pri",
+				"println\tprintln!(…)"
+			],
+			[
+				"de",
+				"descender"
+			],
+			[
+				"defm",
+				"defmod\tdefmodule"
+			],
+			[
+				"DEFAU",
+				"DEFAULT_ARQUIVO"
+			],
+			[
+				"med",
+				"med_3k_c0"
+			],
+			[
+				"xy",
+				"x_y"
+			],
+			[
+				"toat",
+				"total_particles"
+			],
+			[
+				"consi",
+				"consideridx"
+			],
+			[
+				"H_c",
+				"Hc_n_values"
+			],
+			[
+				"Vec",
+				"vector"
+			],
+			[
+				"GRa",
+				"GraphIsomorphism"
+			],
+			[
+				"Vect",
+				"Vector2D"
+			],
+			[
+				"clgra",
+				"clgraph2"
+			],
+			[
+				"OBJ",
+				"OBJECTS"
+			],
+			[
+				"cl_gra",
+				"cl_graph1"
+			],
+			[
+				"cl",
+				"cl_graph2"
+			],
+			[
+				"cl_gr",
+				"cl_graph1"
+			],
+			[
+				"ed",
+				"edge_iter"
+			],
+			[
+				"H1",
+				"H1n_sub"
+			],
+			[
+				"ob",
+				"observadosMais1vez"
+			],
+			[
+				"obser",
+				"observadosMais1vez"
+			],
+			[
+				"end",
+				"endTime"
+			],
+			[
+				"h1",
+				"H1nDiv"
+			],
+			[
+				"vert",
+				"verticesNewGraph"
+			],
+			[
+				"vect",
+				"vector\tstandard header"
+			],
+			[
+				"s",
+				"subgraph"
+			],
+			[
+				"neig",
+				"neighbors"
+			],
+			[
+				"neih",
+				"neighbor"
+			],
+			[
+				"compl",
+				"_completeGraph"
+			],
+			[
+				"SOR",
+				"SOURCES_OUT"
+			],
+			[
+				"acho",
+				"achouCache2"
+			],
+			[
+				"erro",
+				"errouCache1"
+			],
+			[
+				"ach",
+				"achouCache2"
+			],
+			[
+				"begin",
+				"beginend\t$1.begin(), $1.end()"
+			],
+			[
+				"uor",
+				"unordered_map\tstandard header (since c++11)"
+			],
+			[
+				"hadh",
+				"hash_id_j"
+			],
+			[
+				"genera",
+				"generate_subgraph"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "recorder.c",
+			"settings":
+			{
+				"buffer_size": 2219,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "encode_wav.c",
+			"settings":
+			{
+				"buffer_size": 2721,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pacat-sox.sh",
+			"settings":
+			{
+				"buffer_size": 484,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "pacat --record -d alsa_output.pci-0000_00_1f.3.ana"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mv",
+				"File: Move"
+			],
+			[
+				"ui",
+				"UI: Select Color Scheme"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"minim",
+				"View: Toggle Minimap"
+			],
+			[
+				"sideb",
+				"View: Toggle Side Bar"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"ssql",
+				"Set Syntax: SQL"
+			],
+			[
+				"stco",
+				"ST: Setup Connections"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"closeal",
+				"File: Close All"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"termin",
+				"Terminal: Open in project folder"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"trai",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"editor",
+				"Package Control: Add Repository"
+			],
+			[
+				"elix",
+				"Set Syntax: Elixir"
+			],
+			[
+				"si",
+				"View: Toggle Side Bar"
+			],
+			[
+				"tra",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"DELE",
+				"File: Delete"
+			],
+			[
+				"sideba",
+				"View: Toggle Side Bar"
+			],
+			[
+				"sidebar",
+				"View: Toggle Side Bar"
+			],
+			[
+				"mo",
+				"File: Move"
+			],
+			[
+				"SAVE",
+				"File: Save All"
+			],
+			[
+				"ssshel",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"ss",
+				"Set Syntax: C++"
+			],
+			[
+				"mov",
+				"File: Move"
+			],
+			[
+				"s",
+				"Set Syntax: C++"
+			],
+			[
+				"ssc++",
+				"Set Syntax: C++"
+			],
+			[
+				"sid",
+				"View: Toggle Side Bar"
+			],
+			[
+				"trail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/henrique/Documentos/Projetos/audio-recorder"
+	],
+	"file_history":
+	[
+		"/home/henrique/Documentos/Projetos/audio-recorder/example0-sox.c",
+		"/home/henrique/Documentos/Projetos/audio-recorder/parec.c",
+		"/home/henrique/Documentos/Projetos/audio-recorder/output_c.wav",
+		"/home/henrique/Documentos/Projetos/audio-recorder/output_c",
+		"/home/henrique/Documentos/Projetos/audio-recorder/pacat.c",
+		"/home/henrique/Documentos/Projetos/audio-recorder/output.wav",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/src/api.go",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/src/record.go",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/src/main.go",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/src/api_test.go",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/src/record_test.go",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/src/database.go",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/docs/database/001.sql",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/test.sh",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/.gitignore",
+		"/home/henrique/Documentos/Projetos/sleep-diary/sleep-diary-backend/build.sh",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/package.json",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/docs/database/001.sql",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/frontend/components/RecordTable.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/frontend/components/RecordRow.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/frontend/components/RecordModal.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/frontend/components/App.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/backend/Record.go",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/backend/main.go",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/frontend/styles/scss/index.scss",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/frontend/components/AddRecordButton.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/frontend/components/GeneralModal.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/frontend/styles/css/index.css",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/public/index.html",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/webpack.config.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/components/App.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/components/AddRecordButton.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/index.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/components/AddRecordModal.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/components/GeneralModal.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/styles/scss/index.scss",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/styles/css/index.css",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/components/RecordTable.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/components/RecordRow.js",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/css/App.css",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/.gitignore",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/src/css/App.scss",
+		"/home/henrique/Documentos/TestesReact/sleep-diary/.babelrc",
+		"/home/henrique/Documentos/TestesReact/meu-app-teste/package-lock.json",
+		"/home/henrique/Documentos/MATERIAL DE AULA/Material/Programaçao/recursividade.c",
+		"/home/henrique/Documentos/MATERIAL DE AULA/Material/Programaçao/revisao.c",
+		"/home/henrique/Documentos/MATERIAL DE AULA/Material/Programaçao/potenciacao.c",
+		"/home/henrique/Documentos/TestesRust/wasm-game-of-life/src/web.rs",
+		"/home/henrique/Documentos/TestesRust/wasm-game-of-life/.gitignore",
+		"/home/henrique/Documentos/TestesRust/wasm-game-of-life/pkg/wasm_game_of_life.js",
+		"/home/henrique/Documentos/TestesRust/wasm-game-of-life/www/package.json",
+		"/home/henrique/Documentos/TestesRust/wasm-game-of-life/wasm-game-of-life.sublime-project",
+		"/home/henrique/Documentos/TestesRust/guessing_game/Cargo.toml",
+		"/home/henrique/Documentos/TestesRust/guessing_game/Cargo.lock",
+		"/home/henrique/Documentos/PersonalStudies/src/libs/c/MinUnit/minunit.h",
+		"/home/henrique/Documentos/PersonalStudies/Makefile",
+		"/home/henrique/Documentos/PersonalStudies/src/data_structures/tree/binary_search/rb_tree/rb_tree_test.c",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/.editorconfig",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/lib/hello_web/controllers/hello_controller.ex",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/lib/hello_web/views/hello_view.ex",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/lib/hello_web/templates/hello/index.html.eex",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/config/prod.secret.exs",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/config/prod.exs",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/lib/hello/repo.ex",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/config/dev.exs",
+		"/home/henrique/Documentos/TestesElixir/TestePhoenix/hello/lib/hello_web/controllers/page_controller.ex",
+		"/home/henrique/Documentos/TestesLaravel/erp/phpinfo.php",
+		"/home/henrique/Documentos/PhpExtensions/hajax-ext/config.m4",
+		"/home/henrique/Documentos/PhpExtensions/hello-ext/src/hello.c",
+		"/home/henrique/Documentos/PhpExtensions/hello-ext/src/hello.h",
+		"/home/henrique/Documentos/PhpExtensions/README",
+		"/home/henrique/Documentos/PhpExtensions/test_hajax.php",
+		"/home/henrique/Documentos/PhpExtensions/hello-ext/src/hello.lo",
+		"/home/henrique/Documentos/PhpExtensions/hello-ext/config.m4",
+		"/home/henrique/Documentos/PersonalStudies/src/algorithms/ordering/quicksort/c/quicksort.c",
+		"/home/henrique/Documentos/PersonalStudies/src/algorithms/ordering/quicksort/c/quicksort.h",
+		"/home/henrique/Documentos/PersonalStudies/src/algorithms/ordering/quicksort/c/quicksort_test.c",
+		"/home/henrique/Documentos/PersonalStudies/src/algorithms/ordering/shell_sort/c/shell_sort.h",
+		"/home/henrique/Documentos/PersonalStudies/src/algorithms/search/binary_search/c/binary_search_test.c",
+		"/home/henrique/Documentos/PersonalStudies/src/algorithms/search/binary_search/c/binary_search.h",
+		"/home/henrique/Documentos/PersonalStudies/src/algorithms/search/binary_search/c/binary_search.c",
+		"/home/henrique/Documentos/PersonalStudies/src/data_structures/tree",
+		"/home/henrique/Documentos/PersonalStudies/src/algorithms/ordering/insertion_sort/cpp/insertion_sort_test.cpp",
+		"/home/henrique/Documentos/AppsElectron/pesquisa-danfe/src/upload/Upload.js",
+		"/home/henrique/Documentos/AppsElectron/pesquisa-danfe/src/dashboard/Dashboard.js",
+		"/home/henrique/Documentos/AppsElectron/pesquisa-danfe/src/filtros/FiltroCampos.js",
+		"/home/henrique/Documentos/AppsElectron/pesquisa-danfe/.gitignore",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/src/cpp/libs/Aboria/cxxtest/sample/msvc/ReadMe.txt",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/src/python/configurational_entropy.py",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/arquivos_xyz/crns/otim.xyz",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/README.md",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/arquivos_xyz/hcp.xyz",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/spikes/aboria/MVCE/nnsearch.py",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/arquivos_xyz/fcc48.xyz",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/spikes/aboria/MVCE/nnsearch.cpp",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/arquivos_xyz/bcc.xyz",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/spikes/aboria/MVCE/Makefile",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/plot_sio_pdf",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/plot_m_variando_param_c_png",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/m_variando_param_c",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/obter_m.sh",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/gera_graficos.sh",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c90.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c80.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c70.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c60.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c50.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/med_3k_c0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/criar.sh",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c40.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c30.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c20.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c10.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c0.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c100.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c110.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c120.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c130.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c140.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c150.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c160.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c170.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c180.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c190.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c200.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c210.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c220.0",
+		"/home/henrique/Documentos/MaterialAula/Semestre 02-2018/TCC II/Implementacao/EntropiaConfiguracional/medicoes/variando_param_c/graficos/logs/log_grafico_c230.0"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sox_option_t    ",
+			"inInfo",
+			"$0",
+			"STDIN",
+			"stderr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "recorder.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1315,
+								1315
+							]
+						],
+						"settings":
+						{
+							"SL.13.region_keys":
+							[
+							],
+							"SL.19.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2068,
+										2069
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"region.bluish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2067,
+										2068
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2217,
+										2218
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										617,
+										618
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 188.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "encode_wav.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2128,
+								2128
+							]
+						],
+						"settings":
+						{
+							"SL.25.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2838,
+										2839
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										400,
+										401
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2719,
+										2720
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										400,
+										401
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "pacat-sox.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								482,
+								482
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"auto_name": "pacat --record -d alsa_output.pci-0000_00_1f.3.ana",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										482,
+										483
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										475,
+										476
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SQLTools Result":
+	{
+		"height": 447.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "audio-recorder.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"recordgo",
+				"src/record.go"
+			],
+			[
+				"build",
+				"build.sh"
+			],
+			[
+				"recor",
+				"src/record.go"
+			],
+			[
+				"main",
+				"src/main.go"
+			],
+			[
+				"recordtest",
+				"src/record_test.go"
+			],
+			[
+				"api",
+				"src/api.go"
+			],
+			[
+				"Cargot",
+				"Cargo.toml"
+			],
+			[
+				"webr",
+				"tests/web.rs"
+			],
+			[
+				"make",
+				"Makefile"
+			],
+			[
+				"hello.c",
+				"hello-ext/src/hello.c"
+			],
+			[
+				".git",
+				".gitignore"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"READM",
+				"src/cpp/libs/Aboria/cxxtest/sample/msvc/ReadMe.txt"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"readme",
+				"src/cpp/libs/Aboria/cxxtest/sample/msvc/ReadMe.txt"
+			],
+			[
+				"configuration",
+				"src/python/configurational_entropy.py"
+			],
+			[
+				"CONFIGURATION",
+				"src/python/configurational_entropy.py"
+			],
+			[
+				"fccpy",
+				"src/python/geradores_xyz/fcc.py"
+			],
+			[
+				"config",
+				"src/python/configurational_entropy.py"
+			],
+			[
+				"confi",
+				"src/python/configurational_entropy.py"
+			],
+			[
+				"bcc",
+				"arquivos_xyz/bcc.xyz"
+			],
+			[
+				"hcp",
+				"arquivos_xyz/hcp.xyz"
+			],
+			[
+				"fcc48",
+				"arquivos_xyz/fcc48.xyz"
+			],
+			[
+				"find",
+				"src/cpp/FindIsomorphicIndex.cpp"
+			],
+			[
+				"coma",
+				"comandos_init_main"
+			],
+			[
+				"mea",
+				"src/python/measurement.py"
+			],
+			[
+				"me",
+				"src/python/measurement.py"
+			],
+			[
+				"coman",
+				"comandos_init_main"
+			],
+			[
+				"configu",
+				"src/python/configurational_entropy.py"
+			],
+			[
+				"fcc_",
+				"src/python/geradores_xyz/fcc_non_ortho.xyz"
+			],
+			[
+				"nann",
+				"src/cpp/libs/Aboria/third-party/nanoflann/nanoflann.hpp"
+			],
+			[
+				"h",
+				"src/python/geradores_xyz/hcp.xyz"
+			],
+			[
+				"fcc",
+				"arquivos_xyz/fcc.xyz"
+			],
+			[
+				"sear",
+				"src/cpp/SearchTree.cpp"
+			],
+			[
+				"search",
+				"src/cpp/SearchTree.hpp"
+			],
+			[
+				"configura",
+				"src/python/configurational_entropy.py"
+			],
+			[
+				"calc",
+				"src/python/calculate_from_measurement.py"
+			],
+			[
+				"pontosger",
+				"spikes/gnuplot/pontos_gerados_10.xyz"
+			],
+			[
+				"pontosgera",
+				"spikes/gnuplot/pontos_gerados_15.xyz"
+			],
+			[
+				"comand",
+				"comandos_init_main"
+			],
+			[
+				"s",
+				"src/cpp/SearchTree.cpp"
+			],
+			[
+				"tree",
+				"src/cpp/SearchTree.cpp"
+			],
+			[
+				"ponto",
+				"spikes/gnuplot/teste3d/pontos.xyz"
+			],
+			[
+				"conf",
+				"src/python/configurational_entropy.py"
+			],
+			[
+				"measu",
+				"src/python/measurement.py"
+			],
+			[
+				"configur",
+				"src/python/configurational_entropy.py"
+			],
+			[
+				"alte",
+				"medicoes/3k-total-alterado.ce"
+			],
+			[
+				"mainpy",
+				"main.py"
+			],
+			[
+				"grah",
+				"src/cpp/Graph.hpp"
+			],
+			[
+				"grahpc",
+				"src/cpp/Graph.cpp"
+			],
+			[
+				"grapis",
+				"src/cpp/GraphIsomorphism.hpp"
+			],
+			[
+				"grapcp",
+				"src/cpp/Graph.cpp"
+			],
+			[
+				"grahp",
+				"src/cpp/Graph.hpp"
+			],
+			[
+				"graphcp",
+				"src/cpp/Graph.cpp"
+			],
+			[
+				"graph",
+				"src/cpp/Graph.hpp"
+			],
+			[
+				"graphiso",
+				"src/cpp/GraphIsomorphism.hpp"
+			],
+			[
+				"FindIsomorphicIndex.hpp",
+				"src/cpp/FindIsomorphicIndex.hpp"
+			],
+			[
+				"graphhp",
+				"src/cpp/Graph.hpp"
+			],
+			[
+				"testesra",
+				"spikes/testes-hnrq/testes_rapidos.cpp"
+			],
+			[
+				"seart",
+				"src/cpp/SearchTree.cpp"
+			],
+			[
+				"boost",
+				"src/cpp/BoostGraph.cpp"
+			],
+			[
+				"searchtree",
+				"src/cpp/SearchTree.cpp"
+			],
+			[
+				"configurational",
+				"src/cpp/ConfigurationalEntropy.hpp"
+			],
+			[
+				"findis",
+				"src/cpp/FindIsomorphicIndex.cpp"
+			],
+			[
+				"makefi",
+				"Makefile"
+			],
+			[
+				"makef",
+				"spikes/testes-hnrq/Makefile"
+			],
+			[
+				".cu",
+				"src/cpp/FindIsomorphicIndex.cu"
+			],
+			[
+				"GRAPH",
+				"src/cpp/Graph.hpp"
+			],
+			[
+				"FINDISO",
+				"src/cpp/FindIsomorphicIndex.hpp"
+			],
+			[
+				"graphcpp",
+				"src/cpp/Graph.cpp"
+			],
+			[
+				"nauty",
+				"src/cpp/libs/nauty/nauty.h"
+			],
+			[
+				"srcfindis",
+				"src/cpp/FindIsomorphicIndex.cpp"
+			],
+			[
+				"FindIsomorphicIndex",
+				"src/cpp/FindIsomorphicIndex.cpp"
+			],
+			[
+				"ConfigurationalEntropy.hpp",
+				"src/cpp/ConfigurationalEntropy.hpp"
+			],
+			[
+				"findiso",
+				"src/cpp/FindIsomorphicIndex.hpp"
+			],
+			[
+				"makefile",
+				"Makefile"
+			],
+			[
+				"nannof",
+				"src/cpp/libs/Aboria/third-party/nanoflann/nanoflann.hpp"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"graphhpp",
+				"src/cpp/Graph.hpp"
+			],
+			[
+				"MAK",
+				"Makefile"
+			],
+			[
+				"mainy",
+				"main.py"
+			],
+			[
+				"nauty.h",
+				"src/cpp/libs/nauty/nauty.h"
+			],
+			[
+				"configure",
+				"src/cpp/libs/nauty/configure"
+			],
+			[
+				"nanno",
+				"src/cpp/libs/Aboria/third-party/nanoflann/nanoflann.hpp"
+			],
+			[
+				"nautyex8",
+				"src/cpp/libs/nauty/nautyex8.c"
+			],
+			[
+				"nautyex7",
+				"src/cpp/libs/nauty/nautyex7.c"
+			],
+			[
+				"nautyex",
+				"src/cpp/libs/nauty/nautyex6.c"
+			],
+			[
+				"3k01",
+				"arquivos_xyz/SILICA_SAMPLES/3k/3k-0-17-ase.xyz"
+			],
+			[
+				"mak",
+				"Makefile"
+			],
+			[
+				"grach",
+				"src/cpp/Graph.cpp"
+			],
+			[
+				"017xyz",
+				"arquivos_xyz/SILICA_SAMPLES/3k/3k-0-17-ase.xyz"
+			],
+			[
+				"3k12",
+				"arquivos_xyz/SILICA_SAMPLES/3k/3k-0-12-ase.xyz"
+			],
+			[
+				"3kase",
+				"arquivos_xyz/SILICA_SAMPLES/3k/3k-ase.xyz"
+			],
+			[
+				"findisom",
+				"src/cpp/FindIsomorphicIndex.cpp"
+			],
+			[
+				"tes",
+				"spikes/testes-hnrq/testes_rapidos.cpp"
+			],
+			[
+				"mainpro",
+				"main.py.prof"
+			],
+			[
+				"graphc",
+				"src/cpp/Graph.cpp"
+			],
+			[
+				"giti",
+				".gitignore"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documentos/Projetos/sleep-diary/sleep-diary-frontend/sleep-diary-frontend.sublime-project"
+			]
+		],
+		"width": 750.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
