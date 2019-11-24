@@ -1,5 +1,5 @@
 CC=gcc
-FILES=main.c
+FILES=src/*.c
 OPTS=-Wall
 LIBS=-lpulse -lpulse-simple -lsox
 

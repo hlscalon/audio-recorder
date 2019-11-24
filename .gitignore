@@ -5,3 +5,6 @@ encode_wav
 
 *.sublime-project
 *.sublime-workspace
+
+*.mp3
+*.raw

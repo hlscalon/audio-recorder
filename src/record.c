@@ -1,10 +1,18 @@
 #include <stdio.h>
+
+// For NULL
 #include <unistd.h>
+
+// For strerror()
 #include <string.h>
+
+// For errno
 #include <errno.h>
-#include <fcntl.h>
+
 #include <pulse/simple.h>
 #include <pulse/error.h>
+
+#include "record.h"
 
 #define BUFSIZE 1024
 
@@ -31,29 +39,11 @@ static ssize_t loop_write_file(FILE * file, const void * data, size_t size) {
     return ret;
 }
 
-/**
- * Open file or create one, if it does not exist
- */
-FILE * open_file(char * filename) {
-    FILE * f;
-
-    if ((f = fopen(filename, "w+"))) {
-    // if ((f = fopen(filename, "ab+"))) {
-        return f;
-    }
-
-    return NULL;
-}
-
-void print_help() {
-    printf("./audio-recorder <file>\n");
-}
-
 int record_audio(FILE * file) {
     /**
-     * Signed 16 bits, Little Endian
-     * 44.1kb
+     * Samplerate: 44100Hz
      * Dual channel
+     * Signed 16 bits, Little Endian
      */
     static const pa_sample_spec ss = {
         .format = PA_SAMPLE_S16LE,
@@ -66,10 +56,11 @@ int record_audio(FILE * file) {
     int ret = 1;
 
     // Create the recording stream
+    // #TODO: get this device with other methods
     const char device[] = "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor";
     if (!(s = pa_simple_new(NULL, "audio-recorder", PA_STREAM_RECORD, device, "record", &ss, NULL, NULL, &error))) {
         fprintf(stderr, __FILE__": pa_simple_new() failed: %s\n", pa_strerror(error));
-        goto finish2;
+        goto finish;
     }
 
     for (int i = 0;; i++) {
@@ -78,48 +69,21 @@ int record_audio(FILE * file) {
         // Record data
         if (pa_simple_read(s, buf, sizeof(buf), &error) < 0) {
             fprintf(stderr, __FILE__": pa_simple_read() failed: %s\n", pa_strerror(error));
-            goto finish2;
+            goto finish;
         }
 
         // Write to file and check if all data was written correctly
         if (loop_write_file(file, buf, sizeof(buf)) != sizeof(buf)) {
             fprintf(stderr, __FILE__": write() failed: %s\n", strerror(errno));
-            goto finish2;
+            goto finish;
         }
     }
 
     ret = 0;
 
-finish2:
+finish:
     if (s) {
         pa_simple_free(s);
-    }
-
-    return ret;
-}
-
-int main(int argc, char * argv[]) {
-    int ret = 1;
-    FILE * file = NULL;
-
-    if (argc < 2) {
-        fprintf(stderr, __FILE__": filename must be informed\n");
-        print_help();
-
-        goto finish;
-    }
-
-    if ((file = open_file(argv[1])) == NULL) {
-        fprintf(stderr, __FILE__": open_file() failed: %s\n", strerror(errno));
-
-        goto finish;
-    }
-
-    ret = record_audio(file);
-
-finish:
-    if (file) {
-        fclose(file);
     }
 
     return ret;
