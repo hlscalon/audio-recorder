@@ -10,6 +10,7 @@
 #include <errno.h>
 
 #include "record.h"
+#include "encode.h"
 
 /**
  * Open file or create one, if it does not exist
@@ -29,6 +30,11 @@ void print_help() {
 }
 
 int main(int argc, char * argv[]) {
+    if (init_sox() == 0) {
+        fprintf(stderr, __FILE__": init_sox() failed\n");
+        return 1;
+    }
+
     int ret = 1;
     FILE * file = NULL;
 
@@ -51,6 +57,8 @@ finish:
     if (file) {
         fclose(file);
     }
+
+    quit_sox();
 
     return ret;
 }
