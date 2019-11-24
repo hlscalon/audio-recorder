@@ -13,6 +13,7 @@
 #include <pulse/error.h>
 
 #include "record.h"
+#include "encode.h"
 
 #define BUFSIZE 1024
 
@@ -71,6 +72,9 @@ int record_audio(FILE * file) {
             fprintf(stderr, __FILE__": pa_simple_read() failed: %s\n", pa_strerror(error));
             goto finish;
         }
+
+        uint8_t out_buffer[BUFSIZE];
+        encode(buf, out_buffer, BUFSIZE);
 
         // Write to file and check if all data was written correctly
         if (loop_write_file(file, buf, sizeof(buf)) != sizeof(buf)) {
