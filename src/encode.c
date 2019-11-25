@@ -36,8 +36,22 @@ void encode(uint8_t * in_buffer, uint8_t * out_buffer, size_t buffer_size) {
 
     // open output buffer
     // #TODO: check return
+
+    struct sox_encodinginfo_t encoding_out;
+    encoding.encoding = SOX_ENCODING_MP3;
+    // encoding.bits_per_sample = 16;
+    // encoding.opposite_endian = sox_false;
+
+    // struct sox_signalinfo_t info_out;
+    // info.channels = 2;
+    // info.length = 0;
+    // info.precision = 0;
+    // info.rate = 8000;
+
     sox_format_t * out;
-    assert((out = sox_open_mem_write(out_buffer, buffer_size, &in->signal, NULL, NULL, NULL)));
+    // assert((out = sox_open_mem_write(out_buffer, buffer_size, &info_out, &encoding_out, "MP3", NULL)));
+    // assert((out = sox_open_mem_write(out_buffer, buffer_size, &in->signal, NULL, "MP3", NULL)));
+    assert((out = sox_open_write("someday.mp3", &in->signal, NULL, NULL, NULL, NULL)));
 
     sox_effects_chain_t * chain;
     chain = sox_create_effects_chain(&in->encoding, &out->encoding);
