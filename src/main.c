@@ -43,9 +43,9 @@ int main(int argc, char * argv[]) {
     file->name = malloc(strlen(argv[1]) + 1);
     strcpy(file->name, argv[1]);
 
-    file->name_tmp = malloc(strlen(argv[1]) + 4); // for tmp\0
+    file->name_tmp = malloc(strlen(argv[1]) + 5); // for _tmp\0
     strcpy(file->name_tmp, argv[1]);
-    strcat(file->name_tmp, "tmp");
+    strcat(file->name_tmp, "_tmp");
 
     if (!open_files(file)) {
         fprintf(stderr, __FILE__": open_files() failed: %s\n", strerror(errno));

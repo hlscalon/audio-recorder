@@ -7,11 +7,11 @@
  * Open file or create one, if it does not exist
  */
 int open_files(audio_file * file) {
-    if ((file->f = fopen(file->name, "w+"))) {
+    if ((file->f = fopen(file->name, "w+")) == NULL) {
         return 0;
     }
 
-    if ((file->f_tmp = fopen(file->name_tmp, "w+"))) {
+    if ((file->f_tmp = fopen(file->name_tmp, "w+")) == NULL) {
         return 0;
     }
 

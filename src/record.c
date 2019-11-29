@@ -65,7 +65,8 @@ int record_audio(audio_file * file) {
         goto finish;
     }
 
-    for (int i = 0;; i++) {
+    printf("Recording...\n");
+    for (int i = 0; i < 3000; i++) {
         uint8_t buf[BUFSIZE];
 
         // Record data
@@ -80,6 +81,7 @@ int record_audio(audio_file * file) {
         }
     }
 
+    printf("Encoding...\n");
     encode(file->name_tmp, file->name);
 
     ret = 0;
