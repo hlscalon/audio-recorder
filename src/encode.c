@@ -17,7 +17,7 @@ void quit_sox() {
     sox_quit();
 }
 
-void encode(uint8_t * in_buffer, uint8_t * out_buffer, size_t buffer_size) {
+void encode(char * in_file, char * out_file) {
     struct sox_signalinfo_t info;
     info.channels = 2;
     info.length = 0;
@@ -32,44 +32,65 @@ void encode(uint8_t * in_buffer, uint8_t * out_buffer, size_t buffer_size) {
     // open raw buffer
     // #TODO: check return
     sox_format_t * in;
-    assert((in = sox_open_mem_read(in_buffer, buffer_size, &info, &encoding, "RAW")));
+    assert((in = sox_open_read(in_file, &info, &encoding, "RAW")));
 
     // open output buffer
-    // #TODO: check return
-
     struct sox_encodinginfo_t encoding_out;
-    encoding.encoding = SOX_ENCODING_MP3;
-    // encoding.bits_per_sample = 16;
-    // encoding.opposite_endian = sox_false;
+    // encoding_out.encoding = SOX_ENCODING_MP3;
+    encoding_out.encoding = SOX_ENCODING_SIGN2;
+    // encoding_out.bits_per_sample = 0;
+    encoding_out.bits_per_sample = 16;
+    // encoding_out.compression = 32; // bitrate
+    encoding_out.compression = 0; // bitrate
+    encoding_out.reverse_bytes = sox_option_default;
+    encoding_out.reverse_nibbles = sox_option_default;
+    encoding_out.reverse_bits = sox_option_default;
+    encoding_out.opposite_endian = sox_false;
 
-    // struct sox_signalinfo_t info_out;
-    // info.channels = 2;
-    // info.length = 0;
-    // info.precision = 0;
-    // info.rate = 8000;
+    struct sox_signalinfo_t signal_out;
+    // signal_out.rate = 16000; // 128 ?
+    // signal_out.channels = 1;
+    signal_out.rate = 44100; // 128 ?
+    signal_out.channels = 2;
+    signal_out.precision = 0;
+    signal_out.length = 0;
+    signal_out.mult = NULL;
 
     sox_format_t * out;
-    // assert((out = sox_open_mem_write(out_buffer, buffer_size, &info_out, &encoding_out, "MP3", NULL)));
-    // assert((out = sox_open_mem_write(out_buffer, buffer_size, &in->signal, NULL, "MP3", NULL)));
-    assert((out = sox_open_write("someday.mp3", &in->signal, NULL, NULL, NULL, NULL)));
+    assert((out = sox_open_write(out_file, &signal_out, &encoding_out, "MP3", NULL, NULL)));
 
     sox_effects_chain_t * chain;
     chain = sox_create_effects_chain(&in->encoding, &out->encoding);
 
     char * args[10];
-    sox_effect_t * e = sox_create_effect(sox_find_effect("input"));
-    args[0] = (char *)in, assert(sox_effect_options(e, 1, args) == SOX_SUCCESS);
+    sox_effect_t * e;
 
-    assert(sox_add_effect(chain, e, &in->signal, &in->signal) == SOX_SUCCESS);
+    sox_signalinfo_t interm_signal = in->signal;
+
+    e = sox_create_effect(sox_find_effect("input"));
+    args[0] = (char *)in;
+    assert(sox_effect_options(e, 1, args) == SOX_SUCCESS);
+    assert(sox_add_effect(chain, e, &interm_signal, &in->signal) == SOX_SUCCESS);
+    free(e);
+
+    e = sox_create_effect(sox_find_effect("rate"));
+    assert(sox_effect_options(e, 0, NULL) == SOX_SUCCESS);
+    assert(sox_add_effect(chain, e, &interm_signal, &out->signal) == SOX_SUCCESS);
+    free(e);
+
+    e = sox_create_effect(sox_find_effect("channels"));
+    assert(sox_effect_options(e, 0, NULL) == SOX_SUCCESS);
+    assert(sox_add_effect(chain, e, &interm_signal, &out->signal) == SOX_SUCCESS);
     free(e);
 
     e = sox_create_effect(sox_find_effect("output"));
-    args[0] = (char *)out, assert(sox_effect_options(e, 1, args) == SOX_SUCCESS);
-    assert(sox_add_effect(chain, e, &in->signal, &in->signal) == SOX_SUCCESS);
+    args[0] = (char *)out;
+    assert(sox_effect_options(e, 1, args) == SOX_SUCCESS);
+    // assert(sox_add_effect(chain, e, &in->signal, &in->signal) == SOX_SUCCESS);
+    assert(sox_add_effect(chain, e, &interm_signal, &out->signal) == SOX_SUCCESS);
     free(e);
 
     sox_flow_effects(chain, NULL, NULL);
-
     sox_delete_effects_chain(chain);
 
     sox_close(out);

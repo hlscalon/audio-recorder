@@ -3,29 +3,20 @@
 // For NULL
 #include <unistd.h>
 
-// For strerror()
+// For strerror(), strcpy()
 #include <string.h>
 
 // For errno
 #include <errno.h>
 
+// free(), malloc()
+#include <stdlib.h>
+
 #include "record.h"
 #include "encode.h"
+#include "audio_file.h"
 
-/**
- * Open file or create one, if it does not exist
- */
-FILE * open_file(char * filename) {
-    FILE * f;
-
-    if ((f = fopen(filename, "w+"))) {
-        return f;
-    }
-
-    return NULL;
-}
-
-void print_help() {
+static void print_help() {
     printf("./audio-recorder <file>\n");
 }
 
@@ -36,7 +27,11 @@ int main(int argc, char * argv[]) {
     }
 
     int ret = 1;
-    FILE * file = NULL;
+    audio_file * file = malloc(sizeof(audio_file));
+    if (file == NULL) {
+        fprintf(stderr, __FILE__": error allocating memory\n");
+        return 1;
+    }
 
     if (argc < 2) {
         fprintf(stderr, __FILE__": filename must be informed\n");
@@ -45,8 +40,15 @@ int main(int argc, char * argv[]) {
         goto finish;
     }
 
-    if ((file = open_file(argv[1])) == NULL) {
-        fprintf(stderr, __FILE__": open_file() failed: %s\n", strerror(errno));
+    file->name = malloc(strlen(argv[1]) + 1);
+    strcpy(file->name, argv[1]);
+
+    file->name_tmp = malloc(strlen(argv[1]) + 4); // for tmp\0
+    strcpy(file->name_tmp, argv[1]);
+    strcat(file->name_tmp, "tmp");
+
+    if (!open_files(file)) {
+        fprintf(stderr, __FILE__": open_files() failed: %s\n", strerror(errno));
 
         goto finish;
     }
@@ -54,9 +56,7 @@ int main(int argc, char * argv[]) {
     ret = record_audio(file);
 
 finish:
-    if (file) {
-        fclose(file);
-    }
+    free_audio_file(file);
 
     quit_sox();
 

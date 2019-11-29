@@ -4,7 +4,8 @@
 #include <stdio.h>
 #include <stdint.h>
 
-int record_audio(FILE * file);
-void encode(uint8_t * in_buffer, uint8_t * out_buffer, size_t buffer_size);
+#include "audio_file.h"
+
+int record_audio(audio_file * file);
 
 #endif

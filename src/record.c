@@ -14,6 +14,7 @@
 
 #include "record.h"
 #include "encode.h"
+#include "audio_file.h"
 
 #define BUFSIZE 1024
 
@@ -40,7 +41,7 @@ static ssize_t loop_write_file(FILE * file, const void * data, size_t size) {
     return ret;
 }
 
-int record_audio(FILE * file) {
+int record_audio(audio_file * file) {
     /**
      * Samplerate: 44100Hz
      * Dual channel
@@ -73,15 +74,13 @@ int record_audio(FILE * file) {
             goto finish;
         }
 
-        uint8_t out_buffer[BUFSIZE];
-        encode(buf, out_buffer, BUFSIZE);
-
-        // Write to file and check if all data was written correctly
-        if (loop_write_file(file, buf, sizeof(buf)) != sizeof(buf)) {
+        if (loop_write_file(file->f_tmp, buf, sizeof(buf)) != sizeof(buf)) {
             fprintf(stderr, __FILE__": write() failed: %s\n", strerror(errno));
             goto finish;
         }
     }
+
+    encode(file->name_tmp, file->name);
 
     ret = 0;
 
