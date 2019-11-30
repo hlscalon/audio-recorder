@@ -1,17 +1,21 @@
 // free(), malloc()
 #include <stdlib.h>
 
+// remove()
+#include <stdio.h>
+
 #include "audio_file.h"
 
 /**
  * Open file or create one, if it does not exist
  */
 int open_files(audio_file * file) {
-    if ((file->f = fopen(file->name, "w+")) == NULL) {
+    FILE * f;
+    if ((f = fopen(file->name, "w+")) == NULL) {
         return 0;
     }
 
-    fclose(file->f);
+    close_file(f);
 
     if ((file->f_tmp = fopen(file->name_tmp, "w+")) == NULL) {
         return 0;
@@ -30,4 +34,12 @@ void free_audio_file(audio_file * file) {
     }
 
     free(file);
+}
+
+int remove_file(const char * path) {
+    return remove(path);
+}
+
+void close_file(FILE * file) {
+    fclose(file);
 }

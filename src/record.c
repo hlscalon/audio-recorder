@@ -75,6 +75,7 @@ int record_audio(audio_file * file) {
             goto finish;
         }
 
+        // write raw pcm to tmp file
         if (loop_write_file(file->f_tmp, buf, sizeof(buf)) != sizeof(buf)) {
             fprintf(stderr, __FILE__": write() failed: %s\n", strerror(errno));
             goto finish;
@@ -83,8 +84,11 @@ int record_audio(audio_file * file) {
 
     printf("Encoding...\n");
 
-    fclose(file->f_tmp);
+    // close tmp file
+    close_file(file->f_tmp);
     encode(file->name_tmp, file->name);
+
+    remove_file(file->name_tmp);
 
     ret = 0;
 
