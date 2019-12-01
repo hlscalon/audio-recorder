@@ -2,6 +2,7 @@ audios/
 spikes/
 audio-recorder
 encode_wav
+build/
 
 *.sublime-project
 *.sublime-workspace
