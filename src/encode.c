@@ -28,16 +28,19 @@ void encode(char * in_file, char * out_file) {
     char * args[10];
 
     struct sox_signalinfo_t info;
-
-    info.channels = 2;
-    info.length = 0;
-    info.precision = 16;
     info.rate = 44100;
+    info.channels = 2;
+    info.precision = 16;
+    info.length = 0;
+    info.mult = NULL;
 
     struct sox_encodinginfo_t encoding;
-
     encoding.encoding = SOX_ENCODING_SIGN2;
     encoding.bits_per_sample = 16;
+    encoding.compression = 0;
+    encoding.reverse_bytes = sox_option_default;
+    encoding.reverse_nibbles = sox_option_default;
+    encoding.reverse_bits = sox_option_default;
     encoding.opposite_endian = sox_false;
 
     // #TODO: remove assert's

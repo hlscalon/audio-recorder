@@ -7,5 +7,7 @@ build/
 *.sublime-project
 *.sublime-workspace
 
+valgrind-out.txt
+
 *.mp3
 *.raw

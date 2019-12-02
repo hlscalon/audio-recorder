@@ -12,6 +12,8 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 target_link_libraries(audio-recorder Threads::Threads)
 
+set(CMAKE_CXX_FLAGS "-Wall -pedantic -Werror")
+
 #TODO: improve this hardcoded libraries
 target_link_libraries(audio-recorder sox)
 target_link_libraries(audio-recorder pulse)
