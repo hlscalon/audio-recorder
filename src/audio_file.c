@@ -24,6 +24,9 @@ int open_files(audio_file * file) {
     return 1;
 }
 
+/**
+ * Free file names and audio_file pointer
+ */
 void free_audio_file(audio_file * file) {
     if (file->name) {
         free(file->name);

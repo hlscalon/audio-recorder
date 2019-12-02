@@ -17,6 +17,10 @@ void quit_sox() {
     sox_quit();
 }
 
+/**
+ * Receive the path of tmp file containing raw format,
+ * and path of file which will be used to store mp3
+ */
 void encode(char * in_file, char * out_file) {
     static sox_format_t * in, * out; // input and output files, must be static (?)
     sox_effects_chain_t * chain;
@@ -36,6 +40,7 @@ void encode(char * in_file, char * out_file) {
     encoding.bits_per_sample = 16;
     encoding.opposite_endian = sox_false;
 
+    // #TODO: remove assert's
     assert((in = sox_open_read(in_file, &info, &encoding, "RAW")));
 
     assert((out = sox_open_write(out_file, &in->signal, NULL, NULL, NULL, NULL)));
