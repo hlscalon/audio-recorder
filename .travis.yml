@@ -23,6 +23,7 @@ install:
 
 script:
 #   - export CC=gcc-7
+  - sudo find / -iname "sox.h"
   - gcc -v && cmake --version
   - mkdir build && cd build
   - cmake ..
