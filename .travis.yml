@@ -8,6 +8,12 @@ language: c
 compiler:
   - gcc
 
+before_install:
+  - apt-get update
+
+install:
+  - apt-get install libsox-dev
+
 # addons:
 #   apt:
 #     sources:
