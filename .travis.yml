@@ -13,6 +13,8 @@ before_install:
 
 install:
   - sudo apt-get install libsox-dev
+  - sudo mkdir /usr/include/sox
+  - sudo mv /usr/include/soh.h /usr/include/sox/sox.h
 
 # addons:
 #   apt:
