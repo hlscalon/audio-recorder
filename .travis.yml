@@ -15,18 +15,9 @@ install:
   - sudo apt-get install libsox-dev
   - sudo mkdir /usr/include/sox
   - sudo mv /usr/include/sox.h /usr/include/sox/sox.h
-
-# addons:
-#   apt:
-#     sources:
-#       - ubuntu-toolchain-r-test
-#     packages:
-#       - gcc-9
+  - sudo apt-get install libpulse-dev
 
 script:
-#   - export CC=gcc-7
-  - sudo find / -iname "sox.h"
-  - gcc -v && cmake --version
   - mkdir build && cd build
   - cmake ..
   - cmake --build .
