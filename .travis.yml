@@ -9,10 +9,10 @@ compiler:
   - gcc
 
 before_install:
-  - apt-get update
+  - sudo apt-get update
 
 install:
-  - apt-get install libsox-dev
+  - sudo apt-get install libsox-dev
 
 # addons:
 #   apt:
