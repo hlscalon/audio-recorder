@@ -19,7 +19,7 @@ install:
   - sudo apt-get install cppcheck
 
 script:
-  - sh static_analysis.sh
   - mkdir build && cd build
   - cmake ..
   - cmake --build .
+  - cd .. && sh static_analysis.sh
