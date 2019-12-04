@@ -36,12 +36,12 @@ pthread_mutex_t mutex;
 /**
  * Write data to files (raw)
  */
-static ssize_t loop_write_file(FILE * file, const void * data, size_t size) {
+static ssize_t loop_write_file(FILE * file, const void * data, size_t data_ind_size, size_t size) {
     ssize_t ret = 0;
     while (size > 0) {
         ssize_t r;
 
-        if ((r = fwrite(data, sizeof data[0], size, file)) < 0) {
+        if ((r = fwrite(data, data_ind_size, size, file)) < 0) {
             return r;
         }
 
@@ -85,7 +85,7 @@ static void * record_thread(void * s_record_ptr) {
         }
 
         // write raw pcm to tmp file
-        if (loop_write_file(r->file_tmp, buf, sizeof(buf)) != sizeof(buf)) {
+        if (loop_write_file(r->file_tmp, buf, sizeof(uint8_t), sizeof(buf)) != sizeof(buf)) {
             fprintf(stderr, __FILE__": write() failed: %s\n", strerror(errno));
             return NULL;
         }
