@@ -12,6 +12,9 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 target_link_libraries(audio-recorder Threads::Threads)
 
+# to generate compile_commands.json file
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_CXX_FLAGS "-Wall -pedantic -Werror -std=c11")
 
 #TODO: improve this hardcoded libraries

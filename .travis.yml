@@ -22,7 +22,4 @@ script:
   - mkdir build && cd build
   - cmake ..
   - cmake --build .
-  - cd ..
-  - pwd
-  - ls -lh build
-  - sh static_analysis.sh
+  - cd .. && sh static_analysis.sh
