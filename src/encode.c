@@ -44,9 +44,11 @@ void encode(char * in_file, char * out_file) {
     encoding.opposite_endian = sox_false;
 
     // #TODO: remove assert's
-    assert((in = sox_open_read(in_file, &info, &encoding, "RAW")));
+    in = sox_open_read(in_file, &info, &encoding, "RAW");
+    assert(in != NULL);
 
-    assert((out = sox_open_write(out_file, &in->signal, NULL, NULL, NULL, NULL)));
+    out = sox_open_write(out_file, &in->signal, NULL, NULL, NULL, NULL);
+    assert(out != NULL);
 
     chain = sox_create_effects_chain(&in->encoding, &out->encoding);
 
