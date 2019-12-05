@@ -84,8 +84,11 @@ static void * record_thread(void * s_record_ptr) {
             return NULL;
         }
 
+        uint8_t out_buf[BUFSIZE];
+        encode(buf, out_buf, (size_t) BUFSIZE);
+
         // write raw pcm to tmp file
-        if (loop_write_file(r->file_tmp, buf, sizeof(uint8_t), sizeof(buf)) != sizeof(buf)) {
+        if (loop_write_file(r->file_tmp, out_buf, sizeof(uint8_t), sizeof(out_buf)) != sizeof(out_buf)) {
             fprintf(stderr, __FILE__": write() failed: %s\n", strerror(errno));
             return NULL;
         }
@@ -203,10 +206,10 @@ int record_audio(audio_file * file) {
     close_file(file->f_tmp);
 
     // then encode tmp to mp3
-    encode(file->name_tmp, file->name);
+    // encode(file->name_tmp, file->name);
 
     // then remove tmp
-    remove_file(file->name_tmp);
+    // remove_file(file->name_tmp);
 
     ret = 0;
 
