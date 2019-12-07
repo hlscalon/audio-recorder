@@ -4,7 +4,6 @@
 
 #include <assert.h>
 #include <stdint.h>
-#include <stdlib.h>
 #include <sox/sox.h>
 
 #include "encode.h"
@@ -18,14 +17,34 @@ void quit_sox() {
 }
 
 /**
+ * Open write file
+ */
+sox_format_t * open_file(const char * file_name) {
+    struct sox_signalinfo_t info = {
+        .rate = 44100,
+        .channels = 2,
+        .precision = 16,
+        .length = 0,
+        .mult = NULL,
+    };
+
+    static sox_format_t * out;
+    out = sox_open_write(file_name, &info, NULL, NULL, NULL, NULL);
+    assert(out != NULL);
+
+    return out;
+}
+
+void close_file(sox_format_t * out) {
+    sox_close(out);
+}
+
+/**
  * Receive the path of tmp file containing raw format,
  * and path of file which will be used to store mp3
  */
-void encode(uint8_t * raw_buf, uint8_t * out_buf, size_t buf_size) {
-    static sox_format_t * in, * out; // input and output files, must be static (?)
-    sox_effects_chain_t * chain;
-    sox_effect_t * e;
-    char * args[10];
+void encode(uint8_t * raw_buf, size_t buf_size, sox_format_t * out) {
+    static sox_format_t * in; // input and output files, must be static (?)
 
     struct sox_signalinfo_t info;
     info.rate = 44100;
@@ -47,26 +66,13 @@ void encode(uint8_t * raw_buf, uint8_t * out_buf, size_t buf_size) {
     in = sox_open_mem_read(raw_buf, buf_size, &info, &encoding, "RAW");
     assert(in != NULL);
 
-    out = sox_open_mem_write(out_buf, buf_size, &in->signal, NULL, "MP3", NULL);
-    assert(out != NULL);
+    #define MAX_SAMPLES (size_t)2048
+    sox_sample_t samples[MAX_SAMPLES];
 
-    chain = sox_create_effects_chain(&in->encoding, &out->encoding);
+    size_t number_read;
+    while ((number_read = sox_read(in, samples, MAX_SAMPLES))) {
+        assert(sox_write(out, samples, number_read) == number_read);
+    }
 
-    e = sox_create_effect(sox_find_effect("input"));
-    args[0] = (char *)in, assert(sox_effect_options(e, 1, args) == SOX_SUCCESS);
-
-    assert(sox_add_effect(chain, e, &in->signal, &in->signal) == SOX_SUCCESS);
-    free(e);
-
-    e = sox_create_effect(sox_find_effect("output"));
-    args[0] = (char *)out, assert(sox_effect_options(e, 1, args) == SOX_SUCCESS);
-    assert(sox_add_effect(chain, e, &in->signal, &in->signal) == SOX_SUCCESS);
-    free(e);
-
-    sox_flow_effects(chain, NULL, NULL);
-
-    sox_delete_effects_chain(chain);
-
-    sox_close(out);
     sox_close(in);
 }

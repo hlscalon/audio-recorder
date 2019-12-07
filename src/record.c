@@ -3,19 +3,16 @@
 // For NULL
 #include <unistd.h>
 
-// For strerror()
-#include <string.h>
-
 // For errno
 #include <errno.h>
 
+#include <pthread.h>
 #include <pulse/simple.h>
 #include <pulse/error.h>
-#include <pthread.h>
+#include <sox/sox.h>
 
 #include "record.h"
 #include "encode.h"
-#include "audio_file.h"
 
 #define BUFSIZE 1024
 
@@ -25,36 +22,13 @@
 typedef struct {
     int * stop;
     pa_simple * simple;
-    FILE * file_tmp;
+    const char * file_name;
 } shared_s_record;
 
 /**
  * Mutex to control input stop
  */
 pthread_mutex_t mutex;
-
-/**
- * Write data to files (raw)
- */
-static ssize_t loop_write_file(FILE * file, const void * data, size_t data_ind_size, size_t size) {
-    ssize_t ret = 0;
-    while (size > 0) {
-        ssize_t r;
-
-        if ((r = fwrite(data, data_ind_size, size, file)) < 0) {
-            return r;
-        }
-
-        if (r == 0)
-            break;
-
-        ret += r;
-        data = (const uint8_t*) data + r;
-        size -= (size_t) r;
-    }
-
-    return ret;
-}
 
 /**
  * Thread for recording audio
@@ -64,6 +38,8 @@ static void * record_thread(void * s_record_ptr) {
     printf("Recording...\n");
 
     shared_s_record * r = (shared_s_record *) s_record_ptr;
+
+    sox_format_t * out = open_file(r->file_name);
 
     int error;
     for (;;) {
@@ -84,15 +60,10 @@ static void * record_thread(void * s_record_ptr) {
             return NULL;
         }
 
-        uint8_t out_buf[BUFSIZE];
-        encode(buf, out_buf, (size_t) BUFSIZE);
-
-        // write raw pcm to tmp file
-        if (loop_write_file(r->file_tmp, out_buf, sizeof(uint8_t), sizeof(out_buf)) != sizeof(out_buf)) {
-            fprintf(stderr, __FILE__": write() failed: %s\n", strerror(errno));
-            return NULL;
-        }
+        encode(buf, sizeof(buf), out);
     }
+
+    close_file(out);
 
     printf("Recording finished\n");
 
@@ -132,13 +103,13 @@ static void * check_input_thread(void * stop_ptr) {
 /**
  * Create threads for record and input, returning error|success
  */
-static int create_record_threads(pa_simple * s, FILE * tmp) {
+static int create_record_threads(pa_simple * s, const char * file_name) {
     int stop = 0;
 
     shared_s_record shared_r;
     shared_r.stop = &stop;
     shared_r.simple = s;
-    shared_r.file_tmp = tmp;
+    shared_r.file_name = file_name;
 
     // create threads for recording
     pthread_t record_pthread_t, input_pthread_t;
@@ -172,7 +143,7 @@ static int create_record_threads(pa_simple * s, FILE * tmp) {
  * Record raw audio using pulseaudio api,
  * then encoding to mp3
  */
-int record_audio(audio_file * file) {
+int record_audio(const char * file_name) {
     /**
      * Samplerate: 44100Hz
      * Dual channel
@@ -196,20 +167,9 @@ int record_audio(audio_file * file) {
         goto finish;
     }
 
-    if (!create_record_threads(s, file->f_tmp)) {
+    if (!create_record_threads(s, file_name)) {
         goto finish;
     }
-
-    printf("Encoding...\n");
-
-    // close tmp file
-    close_file(file->f_tmp);
-
-    // then encode tmp to mp3
-    // encode(file->name_tmp, file->name);
-
-    // then remove tmp
-    // remove_file(file->name_tmp);
 
     ret = 0;
 

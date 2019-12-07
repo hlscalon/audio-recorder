@@ -7,5 +7,4 @@ Simple gnome audio recorder
 
 - Improve CMake support for sox and pulseaudio
 - GUI interface
-- Remove tmp file and encode while writing
 - Add tests

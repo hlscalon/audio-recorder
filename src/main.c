@@ -1,20 +1,7 @@
 #include <stdio.h>
 
-// For NULL
-#include <unistd.h>
-
-// For strerror(), strcpy()
-#include <string.h>
-
-// For errno
-#include <errno.h>
-
-// free(), malloc()
-#include <stdlib.h>
-
 #include "record.h"
 #include "encode.h"
-#include "audio_file.h"
 
 static void print_help() {
     printf("./audio-recorder <file>\n");
@@ -27,11 +14,6 @@ int main(int argc, char * argv[]) {
     }
 
     int ret = 1;
-    audio_file * file = malloc(sizeof(audio_file));
-    if (file == NULL) {
-        fprintf(stderr, __FILE__": error allocating memory\n");
-        return 1;
-    }
 
     if (argc < 2) {
         fprintf(stderr, __FILE__": filename must be informed\n");
@@ -40,24 +22,9 @@ int main(int argc, char * argv[]) {
         goto finish;
     }
 
-    file->name = malloc(strlen(argv[1]) + 1);
-    strcpy(file->name, argv[1]);
-
-    file->name_tmp = malloc(strlen(argv[1]) + 5); // for _tmp\0
-    strcpy(file->name_tmp, argv[1]);
-    strcat(file->name_tmp, "_tmp");
-
-    if (!open_files(file)) {
-        fprintf(stderr, __FILE__": open_files() failed: %s\n", strerror(errno));
-
-        goto finish;
-    }
-
-    ret = record_audio(file);
+    ret = record_audio(argv[1]);
 
 finish:
-    free_audio_file(file);
-
     quit_sox();
 
     return ret;
