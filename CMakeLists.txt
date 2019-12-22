@@ -5,7 +5,6 @@ project (audio-recorder)
 include_directories(include)
 
 file(GLOB SOURCES "src/*.c")
-list(REMOVE_ITEM SOURCES "src/resources.c")
 
 add_executable(audio-recorder ${SOURCES})
 
@@ -25,15 +24,16 @@ add_definitions(${GTK4_CFLAGS_OTHER})
 
 # Glib compile resources
 add_custom_command(
-    OUTPUT src/resources.c
+	OUTPUT ui/resources.c
     DEPENDS ui/gui.gresource.xml ui/window.ui
-    COMMAND glib-compile-resources ../ui/gui.gresource.xml --sourcedir=../ui --target=../src/resources.c --generate-source
+    # TODO: correct this path
+    COMMAND glib-compile-resources ../ui/gui.gresource.xml --sourcedir=../ui --target=../ui/resources.c --generate-source
     VERBATIM
 )
 
 add_custom_target(
 	resources
-	DEPENDS src/resources.c
+	DEPENDS ui/resources.c
 )
 
 add_dependencies(audio-recorder resources)
