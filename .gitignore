@@ -7,6 +7,8 @@ build/
 *.sublime-project
 *.sublime-workspace
 
+ui/resources.c
+
 valgrind-out.txt
 
 *.mp3
