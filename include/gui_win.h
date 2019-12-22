@@ -7,7 +7,7 @@
 #define AUDIO_RECORDER_GUI_WINDOW_TYPE (audio_recorder_gui_window_get_type())
 G_DECLARE_FINAL_TYPE(AudioRecorderGuiWindow, audio_recorder_gui_window, AUDIO_RECORDER, GUI_WINDOW, GtkApplicationWindow)
 
-AudioRecorderGuiWindow *audio_recorder_gui_window_new(AudioRecorderGui *app);
+AudioRecorderGuiWindow *audio_recorder_gui_window_new(AudioRecorderGui *app, gint n_files, GFile **files);
 void audio_recorder_gui_window_open(AudioRecorderGuiWindow *win, GFile *file);
 
 #endif

@@ -7,6 +7,8 @@ struct _AudioRecorderGuiWindow {
     GtkApplicationWindow parent;
 
     GtkWidget *label_result;
+
+    GFile *file;
 };
 
 G_DEFINE_TYPE(AudioRecorderGuiWindow, audio_recorder_gui_window, GTK_TYPE_APPLICATION_WINDOW);
@@ -74,6 +76,8 @@ static gpointer record(gpointer data) {
 static void btn_start_record_clicked(GtkButton *button, AudioRecorderGuiWindow * win) {
     g_print("Recordddddddddddd\n");
 
+    // ret = record_audio(argv[1]);
+
     WorkerData * d = g_malloc(sizeof *d);
     d->label_result = win->label_result;
     d->count = 0;
@@ -107,8 +111,11 @@ static void audio_recorder_gui_window_class_init(AudioRecorderGuiWindowClass *cl
     gtk_widget_class_bind_template_callback(GTK_WIDGET_CLASS(class), btn_stop_record_clicked);
 }
 
-AudioRecorderGuiWindow * audio_recorder_gui_window_new(AudioRecorderGui *app) {
-    return g_object_new(AUDIO_RECORDER_GUI_WINDOW_TYPE, "application", app, NULL);
+AudioRecorderGuiWindow * audio_recorder_gui_window_new(AudioRecorderGui *app, gint n_files, GFile ** files) {
+    AudioRecorderGuiWindow * win = g_object_new(AUDIO_RECORDER_GUI_WINDOW_TYPE, "application", app, NULL);
+    win->file = files[0];
+
+    return win;
 }
 
 void audio_recorder_gui_window_open(AudioRecorderGuiWindow *win, GFile *file) {}
