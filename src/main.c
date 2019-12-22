@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <gtk/gtk.h>
 
 #include "record.h"
 #include "encode.h"
+#include "gui.h"
 
 static void print_help() {
     printf("./audio-recorder <file>\n");
@@ -22,7 +24,9 @@ int main(int argc, char * argv[]) {
         goto finish;
     }
 
-    ret = record_audio(argv[1]);
+    // ret = record_audio(argv[1]);
+
+    ret = g_application_run(G_APPLICATION(audio_recorder_gui_new()), 0, NULL);
 
 finish:
     quit_sox();

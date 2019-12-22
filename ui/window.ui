@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface domain="">
+  <requires lib="gtk+" version="3.0"/>
+  <template class="AudioRecorderGuiWindow" parent="GtkApplicationWindow">
+    <property name="title" translatable="yes">Audio Recorder</property>
+    <property name="resizable">0</property>
+    <property name="window_position">center</property>
+    <property name="default_width">250</property>
+    <property name="default_height">200</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkToolbar">
+            <child>
+              <object class="GtkToolButton" id="btn_record">
+                <property name="tooltip_text" translatable="yes">Iniciar gravação</property>
+                <property name="is_important">1</property>
+                <property name="label" translatable="yes">Gravar</property>
+                <property name="icon_name">document-save</property>
+                <signal name="clicked" handler="btn_start_record_clicked" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem"/>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="btn_pause">
+                <property name="tooltip_text" translatable="yes">Pausar gravação</property>
+                <property name="is_important">1</property>
+                <property name="label" translatable="yes">Pausar</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem"/>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="btn_stop">
+                <property name="tooltip_text" translatable="yes">Parar gravação</property>
+                <property name="is_important">1</property>
+                <property name="label" translatable="yes">Parar</property>
+                <signal name="clicked" handler="btn_stop_record_clicked" swapped="no"/>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_result">
+            <property name="label" translatable="yes">label</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
