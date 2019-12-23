@@ -44,8 +44,10 @@ static void audio_recorder_gui_open(GApplication *app, GFile **files, gint n_fil
 
 }
 
+static void audio_recorder_gui_activate(GApplication *app) {}
+
 static void audio_recorder_gui_class_init(AudioRecorderGuiClass *class) {
-    // G_APPLICATION_CLASS(class)->activate = audio_recorder_gui_activate;
+    G_APPLICATION_CLASS(class)->activate = audio_recorder_gui_activate;
     G_APPLICATION_CLASS(class)->open = audio_recorder_gui_open;
 }
 
