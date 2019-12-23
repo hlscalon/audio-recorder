@@ -25,12 +25,6 @@ static void quit_invalid_params(GApplication *app) {
 }
 
 static void audio_recorder_gui_open(GApplication *app, GFile **files, gint n_files, const gchar *hint) {
-    // if (init_sox() == 0) {
-    //     fprintf(stderr, __FILE__": init_sox() failed\n");
-    //     return 1;
-    // }
-
-    // g_print("argv[0] = %s\n", g_file_get_basename(argv[0]));
     if (n_files < 1) {
         quit_invalid_params(app);
         return;
@@ -41,10 +35,6 @@ static void audio_recorder_gui_open(GApplication *app, GFile **files, gint n_fil
     win = audio_recorder_gui_window_new(AUDIO_RECORDER_GUI(app), n_files, files);
 
     gtk_window_present(GTK_WINDOW(win));
-
-// finish:
-//     quit_sox();
-
 }
 
 static void audio_recorder_gui_activate(GApplication *app) {

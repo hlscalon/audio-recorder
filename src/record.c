@@ -144,6 +144,11 @@ static int create_record_threads(pa_simple * s, const char * file_name) {
  * then encoding to mp3
  */
 int record_audio(const char * file_name) {
+    if (init_sox() == 0) {
+        fprintf(stderr, __FILE__": init_sox() failed\n");
+        return 1;
+    }
+
     /**
      * Samplerate: 44100Hz
      * Dual channel
@@ -177,6 +182,8 @@ finish:
     if (s) {
         pa_simple_free(s);
     }
+
+    quit_sox();
 
     return ret;
 }
