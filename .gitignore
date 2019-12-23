@@ -7,7 +7,7 @@ build/
 *.sublime-project
 *.sublime-workspace
 
-ui/resources.c
+src/resources.c
 
 valgrind-out.txt
 
