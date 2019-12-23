@@ -17,6 +17,13 @@ static void print_help() {
     printf("./audio-recorder <file>\n");
 }
 
+static void quit_invalid_params(GApplication *app) {
+    g_printerr(__FILE__": filename must be informed\n");
+    print_help();
+
+    g_application_quit(app);
+}
+
 static void audio_recorder_gui_open(GApplication *app, GFile **files, gint n_files, const gchar *hint) {
     // if (init_sox() == 0) {
     //     fprintf(stderr, __FILE__": init_sox() failed\n");
@@ -24,12 +31,8 @@ static void audio_recorder_gui_open(GApplication *app, GFile **files, gint n_fil
     // }
 
     // g_print("argv[0] = %s\n", g_file_get_basename(argv[0]));
-
     if (n_files < 1) {
-        g_printerr(__FILE__": filename must be informed\n");
-        print_help();
-
-        g_application_quit(app);
+        quit_invalid_params(app);
         return;
     }
 
@@ -44,7 +47,10 @@ static void audio_recorder_gui_open(GApplication *app, GFile **files, gint n_fil
 
 }
 
-static void audio_recorder_gui_activate(GApplication *app) {}
+static void audio_recorder_gui_activate(GApplication *app) {
+    // only come here when no files are provided
+    quit_invalid_params(app);
+}
 
 static void audio_recorder_gui_class_init(AudioRecorderGuiClass *class) {
     G_APPLICATION_CLASS(class)->activate = audio_recorder_gui_activate;
