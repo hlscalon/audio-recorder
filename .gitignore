@@ -2,7 +2,8 @@ audios/
 spikes/
 audio-recorder
 encode_wav
-build/
+build-release/
+build-debug/
 
 *.sublime-project
 *.sublime-workspace
