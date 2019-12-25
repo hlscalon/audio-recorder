@@ -15,8 +15,9 @@ install:
   - sudo apt-get install libsox-dev
   - sudo mkdir /usr/include/sox
   - sudo mv /usr/include/sox.h /usr/include/sox/sox.h
-  - sudo apt-get install libpulse-dev
-  - sudo apt-get install cppcheck
+  - sudo apt-get install libpulse-dev \
+  - cppcheck \
+  - libgtk-4-dev
 
 script:
   - mkdir build && cd build
