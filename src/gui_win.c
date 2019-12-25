@@ -33,41 +33,6 @@ gboolean update_gui(gpointer data) {
     return false;
 }
 
-/*static gpointer record(gpointer data) {
-    g_print("Recording...\n");
-
-    WorkerData * d = (WorkerData *) data;
-    stop = 0;
-
-    for (;;) {
-        g_mutex_lock(&mutex_stop);
-        if (stop) {
-            g_mutex_unlock(&mutex_stop);
-            break;
-        }
-
-        g_mutex_unlock(&mutex_stop);
-
-        d->count++;
-
-        if (d->count % 30000 == 0) {
-            d->can_free = 0;
-            g_idle_add(update_gui, d);
-        }
-    }
-
-    g_print("Recording finished\n");
-    g_print("i = %d\n", d->count);
-
-    // wait for free signal
-    while (!d->can_free) {}
-
-    g_free(d->filename);
-    g_free(d);
-
-    return NULL;
-}*/
-
 static void btn_start_record_clicked(GtkButton *button, AudioRecorderGuiWindow * win) {
     g_print("btn-start-record\n");
 

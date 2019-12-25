@@ -98,9 +98,8 @@ finish:
     g_print("i = %d\n", d->count);
 
     // wait for free signal
-    while (!d->can_free) {}
+    // while (!d->can_free) {}
 
-    g_free(d->s_record_data->filename);
     g_free(d);
 
     // #TODO: check if error (ret = 1)
